@@ -1,10 +1,23 @@
+body{
+    background: linear-gradient(to right, #0c1f5c, #343d35, #183825);
+    color: white;
+}
 h1{
     text-align: center;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    
+    overflow: hidden;
+    border-right: .15em solid #333d39;
+    letter-spacing: .15em;
+    white-space: nowrap; 
+    margin: 0 auto; 
+    width: 0;
+    animation: 
+
+      typing 3s steps(40, end) forwards,
+      blink 0.75s  infinite; 
 }
 section{
     text-align: center;
@@ -14,3 +27,41 @@ section{
     padding: 0;
         
 }
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 35%;}
+}
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(9, 100, 62); }
+  }
+@media screen and (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  #navbar{
+    position: fixed;
+    top: 0
+  }
+  .nav-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  li{
+    float: left;
+    }
+    #navbar a {
+        display: block;
+        padding: 8px;
+        background-color: aquamarine;
+        text-decoration: none;
+    }
