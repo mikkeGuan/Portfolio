@@ -1,13 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body{
+  padding-top: 60px;
     background: linear-gradient(to right, #0c1f5c, #343d35, #183825);
     color: white;
 }
 h1{
+    margin-top: 100px;
     text-align: center;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 30;
     overflow: hidden;
     border-right: .15em solid #333d39;
     letter-spacing: .15em;
@@ -27,6 +35,16 @@ section{
     padding: 0;
         
 }
+hr{
+  border: 10px;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.877), rgba(0, 0, 0, 0));
+}
+#welcome-section{
+    margin-top: 10px;
+    padding: 20;
+
+}
 
 @keyframes typing {
     from {width: 0;}
@@ -36,15 +54,25 @@ section{
     from, to { border-color: transparent }
     50% { border-color: rgb(9, 100, 62); }
   }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 910px) {
     body {
       font-size: 14px;
     }
+    h1{
+      font-size: 6vw;
+      white-space: normal;
+      overflow-wrap: break-word;
+      overflow: visible;
+    }
   }
   
-  #navbar{
-    position: fixed;
-    top: 0
+  .navbar {
+    background-color: #444; 
+    padding: 15px;          
+    position: fixed;        
+    width: 100%;             
+    top: 0;                  
+    z-index: 1000;    
   }
   .nav-list{
     list-style-type: none;
@@ -53,15 +81,33 @@ section{
     justify-content: space-around;
     margin: 0;
     padding: 0;
+    opacity: 0.9;
+
 
   }
+  .ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
   
-  li{
-    float: left;
+  .nav-list a{
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .nav-list a:hover, li :active {
+      background-color: #555;  
+      border-radius: 20px;      
+      color: #fff;             
     }
     #navbar a {
         display: block;
         padding: 8px;
-        background-color: aquamarine;
         text-decoration: none;
     }
