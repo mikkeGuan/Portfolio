@@ -1,3 +1,3 @@
 # Portfolio
-Portfolio for **FreeCodeCamp**  responsive web design certification.
+Portfolio with basic html and css
 
